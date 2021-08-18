@@ -9,6 +9,13 @@
 	"supports": {
 		"html": false
 	},
+	"attributes": {
+		"message": {
+			"type": "string",
+			"resource": "text",
+			"selector": "p"
+		}
+	},
 	"textdomain": "learning-blocks",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",

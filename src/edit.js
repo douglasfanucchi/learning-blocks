@@ -29,13 +29,8 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit({ attributes, setAttributes }) {
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Learning Blocks – hello from the editor!',
-				'learning-blocks'
-			) }
-		</p>
+		<input {...useBlockProps()} value={attributes.message} onChange={({ target: { value: message } }) => setAttributes({ ...attributes, message })} />
 	);
 }
